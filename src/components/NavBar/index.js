@@ -1,6 +1,5 @@
 import React from "react";
 import {FaBars} from 'react-icons/fa'
-import { NavLink } from "react-router-dom";
 import { Nav, 
     NavLogo, 
     NavbarContainer, 
@@ -11,8 +10,9 @@ import { Nav,
     NavBtn,
     NavBtnLink
 } from './NavbarElements';
+import CartWidget from "../ShoppingCart/ShoppingCart";
 
-const NavBar = () =>{
+const NavBar = ({toggle}) =>{
      return(
         <>
         <Nav>
@@ -20,10 +20,8 @@ const NavBar = () =>{
                 <NavLogo to='/' >
                     Logo**
                 </NavLogo>
-                <MobileIconBar>
+                <MobileIconBar onClick={toggle}>
                     <FaBars />
-
-                    
                 </MobileIconBar>
                 <NavMenu>
                     <NavItem>
@@ -37,14 +35,20 @@ const NavBar = () =>{
 
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='Sigup'>Inicia Sesion</NavLinks>
+                        <NavLinks to='Sigup'>Crear cuenta nueva</NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to='ShoppingCart'><CartWidget></CartWidget>
+                        </NavLinks>
                     </NavItem>
                 </NavMenu>
                 <NavBtn>
                     <NavBtnLink to= '/signin'>Inicia Sesion</NavBtnLink>
                 </NavBtn>
+                
             </NavbarContainer>
         </Nav>
+        
         </>
    
      );

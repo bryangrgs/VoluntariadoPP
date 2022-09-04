@@ -5,7 +5,7 @@ import {Link as LinkS} from 'react-scroll'
 export const Nav = styled.nav`
 background: #000;
 height: 80px;
-/* margin-top: -80px; */
+margin-top: -80px; 
 display: flex;
 justify-content: center;
 align-items: center;
@@ -25,7 +25,7 @@ justify-content: space-between;
 height: 60px;
 z-index: 1;
 width: 100%;
-max-width: 1000px;
+max-width: 1200px;
 padding: 0 20px;
 
 `;
@@ -69,11 +69,12 @@ align-items: center;
 export const NavItem = styled.li`
 height: 80px;
 `;
+/* NavBar links */
 export const NavLinks = styled(LinkS)`
 display: flex;
 text-decoration: solid;
 color: aliceblue;
-padding: 0 1rem;
+padding: 0 2rem;
 align-items: center;
 height: 100%;
 cursor: pointer;
@@ -82,6 +83,7 @@ cursor: pointer;
  }
 
 `;
+/*Navar tamanio screen */
 export const NavBtn = styled.nav`
 display: flex;
 align-items: center;
@@ -91,13 +93,14 @@ align-items: center;
     
 }
 `
+/*Boton Iniciar Sesion */
 export const NavBtnLink = styled(LinkA)`
-background-color: azure;
+background-color: dimgrey;
 white-space: nowrap;
 border-radius: 50px;
-padding: 10px 20px;
-color: aquamarine;
-font-size: 14px;
+padding: 15px 20px;
+color: white;
+font-size: 16px;
 outline: none;
 border: none;
 transition: all 0.3s ease-in-out;
@@ -107,6 +110,6 @@ text-decoration: solid;
 &:hover{
     transition: all 0.2 ease-in-out ;
     background: white;
-    color: azure;
+    color: black;
 }
 `
