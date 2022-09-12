@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {FaBars} from 'react-icons/fa'
 import { Nav, 
     NavLogo, 
@@ -11,13 +11,31 @@ import { Nav,
     NavBtnLink
 } from './NavbarElements';
 import CartWidget from "../ShoppingCart/ShoppingCart";
+import { IconContext } from "react-icons/lib";
+import { animateScroll as scroll } from "react-scroll";
 
-const NavBar = ({toggle}) =>{
+const NavBar = ({toggle, isOpen}) =>{
+    const [scrollNav , setScrollNav]=useState (false)
+    const changeNav = ()=>{
+        if(window.scrollY >= 80){
+            setScrollNav(true)
+        }else{
+            setScrollNav(false)
+        }
+    }
+    useEffect(()=>{
+        window.addEventListener('scroll',changeNav);
+    },[]);
+
+    const toggleHome = ()=>{
+        scroll.scrollToTop();
+    };
      return(
         <>
-        <Nav>
+        <IconContext.Provider value={{color: '#01BF71'}}>
+        <Nav scrollNav={scrollNav}>
             <NavbarContainer>
-                <NavLogo to='/' >
+                <NavLogo to='/' onClick={toggleHome} >
                     Logo**
                 </NavLogo>
                 <MobileIconBar onClick={toggle}>
@@ -25,17 +43,37 @@ const NavBar = ({toggle}) =>{
                 </MobileIconBar>
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to='us'>Nosotros</NavLinks>
+                        <NavLinks to='us'
+                        smooth= {true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}>Nosotros</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='Exp'>Explorar</NavLinks>
+                        <NavLinks to='Exps' 
+                        smooth= {true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}>Explorar</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='Service'>Nuestros Servicios</NavLinks>
+                        <NavLinks to='Service' 
+                        smooth= {true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}>Top 5 libros del mes</NavLinks>
 
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='Sigup'>Crear cuenta nueva</NavLinks>
+                        <NavLinks to='Signup' 
+                        smooth= {true}
+                        duration={500}
+                        spy={true}
+                        exact='true'
+                        offset={-80}>Crear cuenta nueva</NavLinks>
                     </NavItem>
                     <NavItem>
                         <NavLinks to='ShoppingCart'><CartWidget></CartWidget>
@@ -43,12 +81,12 @@ const NavBar = ({toggle}) =>{
                     </NavItem>
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink to= '/signin'>Inicia Sesion</NavBtnLink>
+                    <NavBtnLink to= '/signin' onClick={toggle}>Inicia  Sesion</NavBtnLink>
                 </NavBtn>
                 
             </NavbarContainer>
         </Nav>
-        
+        </IconContext.Provider>
         </>
    
      );

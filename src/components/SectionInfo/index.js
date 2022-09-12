@@ -5,7 +5,7 @@ import { InfoContainer,InfoBg,VideoInfoBg,
   InfoContent,InfoH1,InfoP,InfoBtnWrapper,ArrowForward,ArrowRight } from './InfoElements';
 
 const SectionInfo = () => {
-  const [hover,setHover]= useState(false)
+  const [hover,setHover]= useState(true)
 
   const onHover =() =>{
     setHover(!hover)
@@ -21,7 +21,7 @@ const SectionInfo = () => {
           <InfoH1>Comprar en nuestra web lo hace mas facil</InfoH1>
           <InfoP>Comienza creando una nueva cuenta y recibe 500$ en tu proxima compra.</InfoP>
           <InfoBtnWrapper>
-            <Button to='Signup' onMouserEnter={onHover} 
+            <Button to='Signup' onMouseEnter={onHover} 
             onMouseLeave={onHover} primary='true' dark='true'>  
             Comienza Ahora {hover ? <ArrowForward/> : <ArrowRight/>}
             </Button>

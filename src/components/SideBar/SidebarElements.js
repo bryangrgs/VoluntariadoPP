@@ -2,28 +2,29 @@ import styled from "styled-components";
 import {FaTimes} from 'react-icons/fa';
 import { Link as LinkS} from 'react-scroll';
 import { Link as LinkA} from 'react-router-dom';
+
 export const SideBarContainer = styled.aside`
 position: fixed;
-z-index: 999;
+z-index: 0;
 width: 100%;
 height: 100%;
-background: black;
+background: white;
 align-items: center;
 top: 0;
 left: 0;
+display: grid;
 transition: 0.3s ease-in-out;
-opacity: ${({ isOpen }) =>( isOpen ? '100%':'0')};
-top:${({ isOpen })=> ( isOpen ?'0':'-100%')}; 
-
-`;
+opacity: ${({ isOpen }) =>( isOpen ? '100%' : '0')};
+top:     ${({ isOpen })=> ( isOpen ? '0':'-100%')}; 
+`
 export const CloseIcon = styled(FaTimes)`
 color: #fff;
 `;
 export const Icon = styled.div`
 top: 1.2rem;
-right: 2.0rem;
+right: 1.5rem;
  background:transparent;
- font-size: 1.5rem;
+ font-size: 2rem;
  position: absolute;
  cursor: pointer;
  outline: none;
@@ -41,7 +42,7 @@ text-decoration: solid;
 font-size: 2rem;
 list-style: none;
 transition: 0.2s ease-in-out;
-color: greenyellow;
+color: green;
 cursor: pointer;
 &:hover{
     color: white;

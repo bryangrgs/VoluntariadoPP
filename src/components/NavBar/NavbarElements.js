@@ -3,7 +3,8 @@ import {Link as LinkA} from 'react-router-dom'
 import {Link as LinkS} from 'react-scroll'
 
 export const Nav = styled.nav`
-background: #000;
+
+background: ${({scrollNav}) => (scrollNav ? ' black' : 'black')};
 height: 80px;
 margin-top: -80px; 
 display: flex;
@@ -14,7 +15,7 @@ top: 0;
 z-index: 10;
 font-size: 1rem;
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 960px){
     transition: 0.6 all ease;
 }
     `;
@@ -22,21 +23,21 @@ font-size: 1rem;
 export const NavbarContainer  = styled.div`
 display: flex;
 justify-content: space-between;
-height: 60px;
+height: 80px;
 z-index: 1;
 width: 100%;
-max-width: 1200px;
-padding: 0 20px;
+max-width: 1100px;
+padding: 0 24px;
 
 `;
 export const NavLogo = styled(LinkA)`
-color: cadetblue;
+color: #fff;
 cursor: pointer;
 font-size: 1.4rem;
 justify-self: flex-start;
 display: flex;
 align-items: center;
-margin-left: 20px;
+margin-left: 24px;
 font-weight: bold;
 text-decoration: solid;
 `;
@@ -58,7 +59,7 @@ export const NavMenu = styled.ul`
 display: flex;
 list-style: none;
 text-align: center;
-margin-right: -20px;
+margin-right: -22px;
 align-items: center;
 @media screen and (max-width: 760px) {
     display: none;
@@ -72,14 +73,14 @@ height: 80px;
 /* NavBar links */
 export const NavLinks = styled(LinkS)`
 display: flex;
-text-decoration: solid;
-color: aliceblue;
-padding: 0 2rem;
+text-decoration: none;
+color: #fff;
+padding: 0 1rem;
 align-items: center;
 height: 100%;
 cursor: pointer;
  &.active{
-    border-bottom: 4x solid  yellowgreen;
+    border-bottom: 3px solid  #01bf71;
  }
 
 `;
@@ -95,12 +96,12 @@ align-items: center;
 `
 /*Boton Iniciar Sesion */
 export const NavBtnLink = styled(LinkA)`
-background-color: dimgrey;
+background-color: #01BF71;
 white-space: nowrap;
 border-radius: 50px;
-padding: 15px 20px;
+padding: 10px 22px;
 color: white;
-font-size: 16px;
+font-size: 12px;
 outline: none;
 border: none;
 transition: all 0.3s ease-in-out;
