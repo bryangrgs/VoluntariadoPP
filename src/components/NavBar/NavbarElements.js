@@ -88,6 +88,7 @@ cursor: pointer;
 export const NavBtn = styled.nav`
 display: flex;
 align-items: center;
+margin-left: 20px;
 
 @media screen and (max-width: 760px)  {
     display: none;

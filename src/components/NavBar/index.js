@@ -10,10 +10,9 @@ import { Nav,
     NavBtn,
     NavBtnLink
 } from './NavbarElements';
-import CartWidget from "../ShoppingCart/ShoppingCart";
 import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
-
+import {Cart} from '../ShoppingCart/Cart/index'
 const NavBar = ({toggle, isOpen}) =>{
     const [scrollNav , setScrollNav]=useState (false)
     const changeNav = ()=>{
@@ -35,7 +34,7 @@ const NavBar = ({toggle, isOpen}) =>{
         <IconContext.Provider value={{color: '#01BF71'}}>
         <Nav scrollNav={scrollNav}>
             <NavbarContainer>
-                <NavLogo to='/' onClick={toggleHome} >
+                <NavLogo to='#' onClick={toggleHome} >
                     Logo**
                 </NavLogo>
                 <MobileIconBar onClick={toggle}>
@@ -64,7 +63,7 @@ const NavBar = ({toggle, isOpen}) =>{
                         duration={500}
                         spy={true}
                         exact='true'
-                        offset={-80}>Top 5 libros del mes</NavLinks>
+                        offset={-80}>Top 10 libros del mes</NavLinks>
 
                     </NavItem>
                     <NavItem>
@@ -76,8 +75,8 @@ const NavBar = ({toggle, isOpen}) =>{
                         offset={-80}>Crear cuenta nueva</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='ShoppingCart'><CartWidget></CartWidget>
-                        </NavLinks>
+                       <Cart></Cart>
+                       
                     </NavItem>
                 </NavMenu>
                 <NavBtn>
