@@ -1,9 +1,11 @@
 
 import { createContext,useEffect, useState } from "react";
+//itemcount
 
  export const CartContext= createContext()
 
-export const CartProvider= ({children}) =>{
+const CartProvider= ({children}) =>{
+    
     const[cartItems,setCartItem]= useState(()=>{
         try {
             const productosEnLocalStorage = localStorage.getItem('cartProducts')
@@ -18,6 +20,10 @@ export const CartProvider= ({children}) =>{
         console.log(cartItems)
         
     },[cartItems]);
+    
+    const clearItem = () => {
+        setCartItem([]);
+      };
 
     const addItemToCart = (producto) =>{
       const inCart = cartItems.find((productInCart )=> productInCart.id === producto.id);
@@ -48,11 +54,29 @@ export const CartProvider= ({children}) =>{
                 } else return productInCart;
             }));
 
-        }
+        };
+      };
+      const ResetItemToCart = (producto) =>{
+        const inCart = cartItems.find(
+            (productInCart) => productInCart.id === producto.id
+        );
+        if(inCart.amount === producto.amount){
+            setCartItem(
+                cartItems.filter((productInCart) => productInCart.id !== producto.id)
+            );
+        }else {
+            setCartItem(cartItems.map((productInCart)=> {
+                if(productInCart.id === producto.id){
+                    return{...inCart, amount : inCart.amount - inCart.amount};
+                } else return productInCart;
+            }));
+
+        };
       };
       return (
-        <CartContext.Provider value= {{cartItems, addItemToCart,deleteItemToCart}}>
+        <CartContext.Provider value= {{cartItems ,clearItem, addItemToCart,deleteItemToCart,ResetItemToCart}}>
             {children}
         </CartContext.Provider>
       )
     };
+    export default CartProvider;

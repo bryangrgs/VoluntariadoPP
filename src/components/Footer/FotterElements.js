@@ -40,6 +40,7 @@ text-align: left;
 width: 160px;
 box-sizing: border-box;
 color: white;
+
 @media screen and (max-width: 420px){
     margin:0;
     padding: 10px;
@@ -49,7 +50,7 @@ color: white;
 }
 `
 export const FooterLinksTitle = styled.h1`
-font-size: 14px;
+font-size: 18px;
 margin-bottom: 16px;
 `
 export const FooterLink = styled(Link)`
@@ -92,6 +93,7 @@ font-weight: bold;
 
 `
 export const WebSiteRights = styled.small`
+margin-left: 20px;
 color: white;
 margin-bottom: 16px;
 `

@@ -104,19 +104,6 @@ margin-bottom: 20px;
 color: #fff;
 font-size: 14px;
 `
-export const Texta= styled.a`
-
-text-decoration: none;
-text-align: center;
-margin-top: 24px;
-margin-bottom: 20px;
-color: #fff;
-font-size: 14px;
-&:hover{
-
-    color: #01bf71;  
-}
-`
 export const ButtonSignin= styled.button`
 text-align: center;
 text-decoration: none;
@@ -128,9 +115,10 @@ color: #fff;
 font-size: 20px;
 cursor: pointer;
 &:hover{
-
-color: #01bf71;  
+    background-color: white;
+color: black;  
 }
+
 `
 export const Line= styled.div`
 align-items:  center;
@@ -141,5 +129,21 @@ text-align: center;
 
 `
 export const FormInput1= styled.input`
+
+`
+export const ButtonSigninLink= styled(Link)`
+text-align: center;
+text-decoration: none;
+background: #01bf71;
+padding: 16px 0;
+border: none;
+border-radius: 4px;
+color: #fff;
+font-size: 20px;
+cursor: pointer;
+&:hover{
+background-color: white;
+color: black;  
+}
 
 `

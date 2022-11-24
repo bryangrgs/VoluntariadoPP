@@ -1,6 +1,6 @@
 .cartContainer{
   width: 100px;
-  height: 500px;
+
   display: grid;
  }
 
@@ -10,10 +10,11 @@
   position: absolute;
   margin-right: 10px;
   cursor: pointer;
+  padding-top: 10px;
 }
 .imagen{
   height: 60px;
-  width: 60px;
+  width: 40px;
   padding-top: 20px;
   align-items: center;
   margin-right: 20px;
@@ -23,6 +24,7 @@
 
 
 .buttonCart{
+  
   background-color: black;
   width: 60px;
   height: 60px;
@@ -32,8 +34,7 @@
   border-radius: 999px;
 }
 .productsNumber{
-  margin-top: 15px;
-
+  margin-top: 20px;
   height: 20px;
   width: 20px;
   border-radius: 999px;
@@ -51,14 +52,14 @@
 }
 
 .cart {
-position:absolute;
-margin-top: 80px;
-margin-right: 40px;
-border-radius: 30px;
-width: 410px;
-background-color: #222222;
-color: white;
-
+  position: absolute;
+  border-radius: 30px;
+  margin-left: -200px;
+  margin-top: 80px;
+  background-color: #222222;
+  color: white;
+  width: 480px;
+  height: 500px;
 } 
 /*agregar max heigth*/
 .titulo2 {
@@ -69,6 +70,7 @@ margin-top: 20px;
   }
 
 .cartVacio {
+
     text-align: center;
     margin-top: 5px;
     font-size: 14px;
@@ -102,4 +104,20 @@ border-radius: 20px;
 }
 .items{
   align-items: center;
-}  
+}
+.contenedorcarro::-webkit-scrollbar {
+  display: flex;
+  position: absolute;
+  height: 7px;
+  width: 7px;
+
+}
+.contenedorcarro::-webkit-scrollbar-thumb{
+background-color: aqua;
+}
+
+.scrollP{
+  overflow:scroll;
+     max-height:400px;
+     
+}

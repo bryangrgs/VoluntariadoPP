@@ -19,9 +19,9 @@ const SectionInfo = () => {
         </InfoBg>
         <InfoContent>
           <InfoH1>Comprar en nuestra web lo hace mas facil</InfoH1>
-          <InfoP>Comienza creando una nueva cuenta y recibe 500$ en tu proxima compra.</InfoP>
+          <InfoP>Comienza creando una nueva cuenta y obten beneficios  mientras mas compras.</InfoP>
           <InfoBtnWrapper>
-            <Button to='/signin' onMouseEnter={onHover} 
+            <Button to='/login' onMouseEnter={onHover} 
             onMouseLeave={onHover} primary='true' dark='true'>  
             Comienza Ahora {hover ? <ArrowForward/> : <ArrowRight/>}
             </Button>

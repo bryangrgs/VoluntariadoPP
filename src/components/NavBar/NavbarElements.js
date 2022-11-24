@@ -96,6 +96,7 @@ margin-left: 20px;
 }
 `
 /*Boton Iniciar Sesion */
+
 export const NavBtnLink = styled(LinkA)`
 background-color: #01BF71;
 white-space: nowrap;
@@ -115,3 +116,37 @@ text-decoration: solid;
     color: black;
 }
 `
+export const NavBtn2 = styled.button`
+background-color: #01BF71;
+white-space: nowrap;
+border-radius: 50px;
+padding: 10px 22px;
+color: white;
+font-size: 12px;
+outline: none;
+border: none;
+transition: all 0.3s ease-in-out;
+cursor: pointer;
+text-decoration: solid;
+
+&:hover{
+    transition: all 0.2 ease-in-out ;
+    background: white;
+    color: black;
+}
+`
+export const NavLinks2 = styled(LinkS)`
+width: 165px;
+font-size: 9px;
+display: flex;
+text-decoration: none;
+color: #fff;
+padding: 0 1rem;
+align-items: center;
+height: 100%;
+cursor: pointer;
+ &.active{
+    border-bottom: 3px solid  #01bf71;
+ }
+
+`;

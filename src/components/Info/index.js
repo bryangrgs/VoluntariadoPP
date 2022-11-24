@@ -25,7 +25,7 @@ export const Info = ({lightBg,id,imgStart,topLine1,
                         <Heading lightText={lightText}>{headLine}</Heading>
                         <Subtitle darkText={darkText}>{description}</Subtitle>
                         <BtnWrap>
-                            <Button to='/signin' onClick={onHover}
+                            <Button to='catalogo' onClick={onHover}
                             smooth={true}
                             duration={500}
                             spy={true}

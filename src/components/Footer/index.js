@@ -1,6 +1,6 @@
 import React from 'react'
 import { animateScroll as scroll } from 'react-scroll'
-import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaGithub } from 'react-icons/fa'
 import { FooterContainer, FooterWrap, FooterLink,FooterLinksContainer, 
     FooterLinksWrapper,FooterLinksTitle , FooterLinksItems, 
     SocialMedia, SocialMediaWrap, SocialLogo , WebSiteRights, SocialIcons, SocialIconLink } from './FotterElements'
@@ -17,36 +17,36 @@ export const Footer = () => {
                 <FooterLinksWrapper>
                     <FooterLinksItems>
                         <FooterLinksTitle>Sobre Nosotros</FooterLinksTitle>
-                            <FooterLink to='/signin'> Como trabajamos </FooterLink>
-                            <FooterLink to='/signin'> Comentarios </FooterLink>
-                            <FooterLink to='/signin'> Inversores </FooterLink>
-                            <FooterLink to='/signin'> Terminos y Servicios </FooterLink>
+                            <FooterLink to='/#'> Como trabajamos </FooterLink>
+                            <FooterLink to='/#'> Comentarios </FooterLink>
+                            <FooterLink to='/#'> Inversores </FooterLink>
+                            <FooterLink to='/#'> Terminos y Servicios </FooterLink>
                         
                     </FooterLinksItems>
                     <FooterLinksItems>
-                        <FooterLinksTitle>Algo</FooterLinksTitle>
-                            <FooterLink to='/signin'> Como trabajamos </FooterLink>
-                            <FooterLink to='/signin'> Comentarios </FooterLink>
-                            <FooterLink to='/signin'> Inversores </FooterLink>
-                            <FooterLink to='/signin'> Terminos y Servicios </FooterLink>
+                        <FooterLinksTitle>Cuenta</FooterLinksTitle>
+                            <FooterLink to='/#'> Mi Lista </FooterLink>
+                            <FooterLink to='/#'> Historial </FooterLink>
+                            <FooterLink to='/#'> Mi cuenta </FooterLink>
+                            <FooterLink to='/#'> Desconectar </FooterLink>
                         
                     </FooterLinksItems>
                 </FooterLinksWrapper>
                 <FooterLinksWrapper>
                     <FooterLinksItems>
                         <FooterLinksTitle>Contactanos</FooterLinksTitle>
-                            <FooterLink to='/signin'> Envianos un mensaje </FooterLink>
-                            <FooterLink to='/signin'> Ayuda </FooterLink>
-                            <FooterLink to='/signin'> Locales </FooterLink>
-                            <FooterLink to='/signin'> Sponsor  </FooterLink>
+                            <FooterLink to='/#'> Envianos un mensaje </FooterLink>
+                            <FooterLink to='/#'> Ayuda </FooterLink>
+                            <FooterLink to='/#'> Locales </FooterLink>
+                            <FooterLink to='/#'> Sponsor  </FooterLink>
                         
                     </FooterLinksItems>
                     <FooterLinksItems>
                         <FooterLinksTitle>Redes Sociales</FooterLinksTitle>
-                            <FooterLink to='/signin'> Instagran </FooterLink>
-                            <FooterLink to='/signin'> Facebook </FooterLink>
-                            <FooterLink to='/signin'> Youtube </FooterLink>
-                            <FooterLink to='/signin'> Twitter  </FooterLink>
+                            <FooterLink to='/#'> Instagran </FooterLink>
+                            <FooterLink to='/#'> Facebook </FooterLink>
+                            <FooterLink to='/#'> Youtube </FooterLink>
+                            <FooterLink to='/#'> Twitter  </FooterLink>
                         
                     </FooterLinksItems>
                 </FooterLinksWrapper>
@@ -54,25 +54,30 @@ export const Footer = () => {
             <SocialMedia>
                 <SocialMediaWrap>
                     <SocialLogo to='/' onClick={toggleHome}>algo</SocialLogo>
-                    <WebSiteRights>bryan Pratica Profesionalizante TECLAB{new Date().getFullYear()} Todos los derechos reservados.</WebSiteRights>
+                    <WebSiteRights>Pratica Profesionalizante TECLAB {new Date().getFullYear()} Todos los derechos reservados.</WebSiteRights>
                     <SocialIcons>
-                        <SocialIconLink href="/" target="_blank" aria-label="Instagram">
+                        <SocialIconLink href="https://www.instagram.com/l3ryan_georges" target="_blank" aria-label="Instagram">
                             <FaInstagram></FaInstagram>
                         </SocialIconLink>
                     </SocialIcons>
                     <SocialIcons>
-                        <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+                        <SocialIconLink href="https://www.facebook.com/bryan.georges" target="_blank" aria-label="Facebook">
                             <FaFacebook></FaFacebook>
                         </SocialIconLink>
                     </SocialIcons>
                     <SocialIcons>
-                        <SocialIconLink href="/" target="_blank" aria-label="Youtube">
+                        <SocialIconLink href="https://www.youtube.com/watch?v=mCdA4bJAGGk" target="_blank" aria-label="Youtube">
                             <FaYoutube></FaYoutube>
                         </SocialIconLink>
                     </SocialIcons>
                     <SocialIcons>
-                        <SocialIconLink href="/" target="_blank" aria-label="Linkedin">
+                        <SocialIconLink href="https://www.linkedin.com/in/bryan-georges-411989238/?originalSubdomain=ar" target="_blank" aria-label="Linkedin">
                             <FaLinkedin></FaLinkedin>
+                        </SocialIconLink>
+                    </SocialIcons>
+                    <SocialIcons>
+                        <SocialIconLink href="https://github.com/bryangrgs" target="_blank" aria-label="FaGithub">
+                            <FaGithub></FaGithub>
                         </SocialIconLink>
                     </SocialIcons>
                 </SocialMediaWrap>
