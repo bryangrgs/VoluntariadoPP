@@ -1,0 +1,108 @@
+.precio{
+    font-weight: bold;
+    font-size: 30px;
+   margin-left: 100px;
+    color: #222222;
+}
+.preciodes{
+  
+    width: 210px;
+    margin: 10px;
+    height: 200px;
+    font-size: 10px;
+}
+  .letras{
+    width: 140px;
+    margin-top: 55px;
+    height: 50px;
+    font-size: 13px;
+}
+.containerbajo{
+  margin: 0;
+}
+.botoncarrito{
+    
+    color: white;
+    background-color:  rgba(79, 12, 162, 0.794);
+    margin-top: 340px;
+    border: 3px solid black;
+    border-radius: 3px;
+    padding: 14px 10px 14px 10px;
+    cursor: pointer;
+    position: absolute;
+    font-size: 14px;
+}
+.divcarritoboton{
+    border: none;
+    
+}
+.productsContainer{
+    padding-top: 50px;
+    background: black;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    justify-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 0;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.product{
+    background:linear-gradient(108deg,
+    rgba(79, 12, 162, 0.794) 0%,
+    rgb(10,201,122,1) 100%);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    padding: 30px 30px 100px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+    transition: all 0.3 ease-in-out;
+    width: 420px;
+    height: 350px;
+    
+   
+}
+
+img{
+    width: 100px;
+}
+p{
+    font-weight: bold;
+    text-align: center;
+}
+button{
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+    
+}
+button:hover{
+    background-color: rgb(10,201,122,1) ;
+}
+.contenedorcarro1{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    background-color: #222222;
+    color: white;
+    align-items: initial;
+    flex-direction: column;
+    
+  
+  }  
+
+  .imagen{
+    margin-left: 5px;
+    justify-content: center;
+    height: 180px;
+    width: 180px;
+  }
