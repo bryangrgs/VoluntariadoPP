@@ -17,25 +17,16 @@ import { animateScroll as scroll } from "react-scroll";
 import { Cart } from "../ShoppingCart/Cart";
 import {useAuth} from '../Sigin/context/authContext';
 
-const NavBar = ({toggle}) =>{
 
+const NavBar = ({toggle}) =>{
 const {user,logout}= useAuth();
 
 const handleLogout=async()=>{
+    
     await logout();
+
     
   };
-
-
-
-
-
-
-
-
-
-
-
 
     const [scrollNav , setScrollNav]=useState (false)
     const changeNav = ()=>{
@@ -111,7 +102,7 @@ const handleLogout=async()=>{
                     </NavItem>
                 </NavMenu>
                
-                { user &&
+                render(){ user &&
                 <NavLinks2>{user.email}</NavLinks2>
                 }
                  <NavBtn>

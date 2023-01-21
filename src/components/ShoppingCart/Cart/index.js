@@ -37,7 +37,7 @@ export const Cart = () => {
       setPrecioTotal(total);
     };
     precioReduce();
-  }, []);
+  }, );
 
 
 

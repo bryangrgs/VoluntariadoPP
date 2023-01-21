@@ -6,11 +6,11 @@ import { useState } from "react";
  export const authContext = createContext();
 
   export const useAuth=()=>{
-    const contex= useContext(authContext);
-    if (!contex) throw new Error('no hay provider')
-    return contex
+    const context= useContext(authContext);
+    if (!context) throw new Error('no hay provider')
+    return context
 
- }
+ };
 
 
  export function AuthProvider({children}){
